@@ -1,8 +1,6 @@
 # coding: utf-8
 
 require 'transpec/syntax'
-require 'transpec/syntax/mixin/send'
-require 'transpec/syntax/mixin/monkey_patch'
 require 'transpec/syntax/mixin/expectizable'
 require 'transpec/syntax/mixin/allow_no_message'
 require 'transpec/syntax/mixin/any_instance'
@@ -10,8 +8,7 @@ require 'transpec/syntax/mixin/any_instance'
 module Transpec
   class Syntax
     class ShouldReceive < Syntax
-      include Mixin::Send, Mixin::MonkeyPatch, Mixin::Expectizable, Mixin::AllowNoMessage,
-              Mixin::AnyInstance
+      include Mixin::MonkeyPatch, Mixin::Expectizable, Mixin::AllowNoMessage, Mixin::AnyInstance
 
       alias_method :useless_expectation?, :allow_no_message?
 

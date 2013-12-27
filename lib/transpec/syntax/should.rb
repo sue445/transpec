@@ -2,7 +2,6 @@
 
 require 'transpec/syntax'
 require 'transpec/syntax/mixin/should_base'
-require 'transpec/syntax/mixin/monkey_patch'
 require 'transpec/syntax/mixin/expectizable'
 require 'transpec/util'
 
