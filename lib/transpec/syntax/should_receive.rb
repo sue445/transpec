@@ -2,13 +2,13 @@
 
 require 'transpec/syntax'
 require 'transpec/syntax/mixin/expectizable'
-require 'transpec/syntax/mixin/allow_no_message'
 require 'transpec/syntax/mixin/any_instance'
+require 'transpec/syntax/mixin/allow_no_message'
 
 module Transpec
   class Syntax
     class ShouldReceive < Syntax
-      include Mixin::Expectizable, Mixin::AllowNoMessage, Mixin::AnyInstance
+      include Mixin::Expectizable, Mixin::AnyInstance, Mixin::AllowNoMessage
 
       alias_method :useless_expectation?, :allow_no_message?
 
