@@ -1,6 +1,7 @@
 # coding: utf-8
 
 require 'active_support/concern'
+require 'transpec/syntax/mixin/monkey_patch'
 require 'transpec/util'
 
 module Transpec
@@ -8,6 +9,7 @@ module Transpec
     module Mixin
       module Expectizable
         extend ActiveSupport::Concern
+        include MonkeyPatch
 
         def wrap_subject_in_expect!
           wrap_subject_with_method!('expect')

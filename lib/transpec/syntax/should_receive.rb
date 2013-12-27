@@ -8,7 +8,7 @@ require 'transpec/syntax/mixin/any_instance'
 module Transpec
   class Syntax
     class ShouldReceive < Syntax
-      include Mixin::MonkeyPatch, Mixin::Expectizable, Mixin::AllowNoMessage, Mixin::AnyInstance
+      include Mixin::Expectizable, Mixin::AllowNoMessage, Mixin::AnyInstance
 
       alias_method :useless_expectation?, :allow_no_message?
 

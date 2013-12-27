@@ -8,7 +8,7 @@ require 'transpec/util'
 module Transpec
   class Syntax
     class Should < Syntax
-      include Mixin::ShouldBase, Mixin::MonkeyPatch, Mixin::Expectizable, Util
+      include Mixin::ShouldBase, Mixin::Expectizable, Util
 
       attr_reader :current_syntax_type
 
