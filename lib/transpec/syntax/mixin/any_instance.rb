@@ -10,8 +10,8 @@ module Transpec
         extend ActiveSupport::Concern
         include ::AST::Sexp
 
-        def self.included(syntax)
-          syntax.add_dynamic_analysis_request do |rewriter|
+        included do
+          add_dynamic_analysis_request do |rewriter|
             key = :any_instance_target_class_name
             code = <<-END.gsub(/^\s+\|/, '').chomp
               |if self.class.name == 'RSpec::Mocks::AnyInstance::Recorder'
